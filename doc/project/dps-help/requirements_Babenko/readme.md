@@ -1,4 +1,4 @@
 # Аналіз вимог до підсистеми
 
-* [Аналіз предметної області](https://github.com/Varen-6/jace-dps-express/blob/Vika-Babenko/doc/project/dps-help/requirements_Babenko/Subject%20area%20analysis.md)
-* [Запити зацікавлених осіб](https://github.com/Varen-6/jace-dps-express/blob/Vika-Babenko/doc/project/dps-help/requirements_Babenko/Inquiries%20from%20interested%20parties.md)
+* [Аналіз предметної області](https://github.com/Varen-6/jace-dps-express/blob/Vika-Babenko/doc/project/dps-help/requirements_Babenko/Subject%20area%20analysis_Babenko.md)
+* [Запити зацікавлених осіб](https://github.com/Varen-6/jace-dps-express/blob/Vika-Babenko/doc/project/dps-help/requirements_Babenko/Inquiries%20from%20interested%20parties_Babenko.md)
