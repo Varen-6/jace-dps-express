@@ -1,6 +1,6 @@
-# s
+# site
 
-> s
+> site
 
 ## Build Setup
 
