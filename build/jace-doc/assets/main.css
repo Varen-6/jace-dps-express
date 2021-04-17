@@ -11,13 +11,6 @@
   margin: 1.5rem auto;
 }
 
-.header h1 {
-  padding: 5px;
-  text-align: left;
-  background: #ffffff;
-  color: rgb(3, 3, 3);
-  font-size: 15px;
-}
 
 pre {
     font-size: 1em;
