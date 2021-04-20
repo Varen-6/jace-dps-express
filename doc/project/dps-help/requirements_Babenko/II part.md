@@ -39,7 +39,32 @@ This is the default content
   This is more content
   {% endblock %}
 </section>
-``` 
+```  
+І ми рендеримо цей шаблон:
+```javascript
+{% extends "parent.html" %}
+
+{% block left %}
+This is the left side!
+{% endblock %}
+
+{% block right %}
+This is the right side!
+{% endblock %}
+```  
+На виводі ми отримуємо:
+``` javascript
+This is the default content
+
+<section class="left">
+  This is the left side!
+</section>
+
+<section class="right">
+  This is the right side!
+</section>
+```
+
 
 
 
