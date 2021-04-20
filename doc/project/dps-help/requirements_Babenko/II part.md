@@ -21,7 +21,25 @@
 * [brackets](https://github.com/axelboc/nunjucks-brackets)
 * [sublime](https://github.com/mogga/sublime-nunjucks/blob/master/Nunjucks.tmLanguage)
 * [emacs](http://web-mode.org)
-* [vscode](https://github.com/ronnidc/vscode-nunjucks)
+* [vscode](https://github.com/ronnidc/vscode-nunjucks)  
+#### 2.2.2 Приклади наслідування шаблону  
+* Успадкування шаблонів - це спосіб спростити повторне використання коду. Під час написання шаблону ви можете визначити "блоки", які можуть замінити дочірні шаблони . Ланцюжок успадкування може бути скільки завгодно довгим.  
+Якщо у нас є шаблон parent.html, який виглядає так:
+```javascript
+{% block header %}
+This is the default content
+{% endblock %}
+
+<section class="left">
+  {% block left %}{% endblock %}
+</section>
+
+<section class="right">
+  {% block right %}
+  This is more content
+  {% endblock %}
+</section>
+``` 
 
 
 
