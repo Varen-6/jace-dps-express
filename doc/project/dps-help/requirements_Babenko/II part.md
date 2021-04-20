@@ -12,9 +12,9 @@
 * Використання API конфігурації
 * За допомогою окремих шаблонів можна створити веб-сторінку
 * [Офіційна документація по використанню nunjucks](https://mozilla.github.io/nunjucks/getting-started.html)
-  **Templating**
+### 2.2Templating
 * Можливе використання будь-якого розширення файлу, яке ви хочете для ваших файлів шаблонів Nunjucks, співтовариство Nunjucks прийняло .njk
-####2.2.1 Підсвічування синтаксису:
+  2.2.1 Підсвічування синтаксису:
 * [atom]( https://github.com/alohaas/language-nunjucks)
 * [vim](https://github.com/niftylettuce/vim-jinja)
 * [brackets](https://github.com/axelboc/nunjucks-brackets)
