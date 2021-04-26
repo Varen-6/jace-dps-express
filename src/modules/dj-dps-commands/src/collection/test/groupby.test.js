@@ -4,7 +4,7 @@ describe("Collection.countby test suite", () => {
   test("command should be defined", () => {
     expect(groupByCommand).toBeDefined();
   });
-  test("should returns correct result for empty collection", () => {
+  test("should return correct result for empty collection", () => {
     let command = {
       settings: {},
     };
@@ -20,7 +20,7 @@ describe("Collection.countby test suite", () => {
     expect(res.head.type).toBe("json");
     expect(res.head.data).toEqual([]);
   });
-  test("should returns counts for selected fields", () => {
+  test("should return counts for selected fields", () => {
     let command = {
       settings: {
         mapper: (d) => d.b,
@@ -57,7 +57,7 @@ describe("Collection.countby test suite", () => {
     ]);
   });
 
-  test("should throws exception when data is not a collection on head", () => {
+  test("should throw exception when data is not a collection on head", () => {
     let command = {
       settings: {},
     };
