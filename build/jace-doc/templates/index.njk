@@ -8,7 +8,7 @@
     {{ content | safe }}
   </div>
   
-  <ul>
+  <ul class="table-of-content">
     {% for page in frontMatter.refs.items %}
       <li>
         <a href="{{ page.url }}">

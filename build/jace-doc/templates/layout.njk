@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ assets['vuetify.min.css'] }}">
   <link rel="stylesheet" href="{{ assets['tomorrow.css'] }}">
   <link rel="stylesheet" href="{{ assets['github-markdown.css'] }}">
+  <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
   
 </head>
 
@@ -19,7 +20,9 @@
   {% include "_header.njk" %}
 
   <main class="container">
+    <div class="view">
     {% block content %}{% endblock %}
+    </div>
   </main>
 
   {% include "_footer.njk" %}
