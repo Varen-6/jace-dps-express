@@ -38,4 +38,3 @@ get("$.commitNote")
 info()
 log()
 ```
-test
