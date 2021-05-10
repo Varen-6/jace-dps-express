@@ -26,4 +26,3 @@ describe("Text.text test suite", () => {
     expect(result.head.type).toBe("string");
   });
 });
-``
