@@ -12,5 +12,5 @@ They are follows aliases of command name:
 
 
 ### Command parameters
-+ ```find```(aliased as ```email```) - **default command parameter** Wrapper tag name (required)
++ ```find```(aliased as ```email```) - **default command parameter** (required)
 

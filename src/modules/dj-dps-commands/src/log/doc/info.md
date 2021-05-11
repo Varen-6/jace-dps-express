@@ -14,7 +14,7 @@ They are follows aliases of command name:
 
 ### Command Parameters
 
-+ ```info```(aliased as ```value```) - **default command parameter** Wrapper tag name (required)
++ ```info```(aliased as ```value```) - **default command parameter** Value of info message (required)
 
 
 ## How to use
