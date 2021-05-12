@@ -10,7 +10,13 @@ template: index.njk
     [1,1,1]
 ?>
 
-text()
+str()
 json()
-text()
+str()
+```
+
+This data processing script returns
+
+```dps
+"[1,1,1]"
 ```

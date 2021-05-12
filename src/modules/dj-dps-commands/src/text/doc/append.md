@@ -17,3 +17,9 @@ append('</h1>')
 <?html hello ?>
 wrap('h1')
 ```
+
+This data processing script returns
+
+```html
+<h1>hello</h1>
+```
