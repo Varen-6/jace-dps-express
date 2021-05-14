@@ -1,5 +1,4 @@
-let util = require("util");
-let _ = require("lodash-node");
+let _ = require("lodash");
 
 // let GroupByImplError = function(message) {
 //     this.message = message;
@@ -35,7 +34,7 @@ module.exports = {
     // if (state.head.type != "json")
     //     throw new GroupImplError("Incompatible context type: '" + state.head.type + "' Use 'json()' command for convert context to 'json' type.")
 
-    if (!util.isArray(state.head.data))
+    if (!_.isArray(state.head.data))
       throw new Error(
         "Incompatible context type: '" + typeof state.head.data + "."
       );
@@ -43,13 +42,13 @@ module.exports = {
     if (!command.settings.criteria)
       throw new Error("Group criteria not defined.");
 
-    if (!util.isFunction(command.settings.criteria)) {
+    if (!_.isFunction(command.settings.criteria)) {
       let attr_name = command.settings.criteria;
       command.settings.criteria = (item) => item[attr_name];
     }
 
     try {
-      let res = _.unique(
+      let res = _.uniq(
         state.head.data.map((d) => command.settings.criteria(d))
       );
 
