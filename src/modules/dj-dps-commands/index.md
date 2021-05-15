@@ -22,4 +22,4 @@ that provide user friendly online SPA builder for Data Management, Data Mining, 
 + Toolkit for Data Mining and Visualization: multidimensional data cube manipulation, data queries (projections, selections, joins), interactive charts, multilayered maps, tables, embedded data processing and data mining
 + Toolkit for Project Management
 
-**DPS Commands Help**
+
