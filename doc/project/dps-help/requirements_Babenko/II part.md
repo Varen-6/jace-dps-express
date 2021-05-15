@@ -100,7 +100,7 @@ Micromatch підтримує наступні розширені функції
 
 У проекті вони розташовані за директорією ``` jace-dps-express\build\templates\template.njk.```
 
-![uml](https://drive.google.com/file/d/1OtEW4O8MHaivd0HrknaDLNhdw-Y51C0f/view?usp=sharing)
+![alt text](https://drive.google.com/file/d/1OtEW4O8MHaivd0HrknaDLNhdw-Y51C0f/view?usp=sharing)
 
 
 
