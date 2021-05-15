@@ -138,4 +138,33 @@ Micromatch підтримує наступні розширені функції
 
 ![Screenshot](3.png)
 
+* index.njk - шаблон, по якому збирається увесь сайт
+
+``` js
+{% extends "layout.njk" %}
+
+{% block content %}
+  
+  <div class="markdown-body">
+    
+    
+    {{ content | safe }}
+  </div>
+  
+  <ul class="table-of-content">
+    <div class="mt-5 text-white text-center w-5/6 mx-auto py-5 text-xl font-bold rounded bg-black title">
+           DPS Commands Help
+         </div>
+    {% for page in frontMatter.refs.items %}
+      <li class="my-2 py-3 bg-black text-white rounded-xl text-center blinking">
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
+```
+
 
