@@ -102,8 +102,21 @@ Micromatch підтримує наступні розширені функції
 
 ![Screenshot](1.png)
 
+Кожен з шаблонів має відповідну структуру:
 
+* _header.njk_
 
+``` js
+<header class="header container"> 
+  <h1>
+    JACE Data Processing Service \\ назва сайту
+  <hr> \\ горизонтальна лінія
+  </h1>
+  
+</header>
+```
+Результат роботи цього шаблону:
 
+![Screenshot](2.png)
 
 
