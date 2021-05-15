@@ -2,6 +2,7 @@
 
 {% block content %}
   <h1>{{ frontMatter.title }}</h1>
+  
   <ul>
     {% for post in collection %}
       <li>
@@ -11,4 +12,5 @@
       </li>
     {% endfor %}
   </ul>
+  
 {% endblock %}

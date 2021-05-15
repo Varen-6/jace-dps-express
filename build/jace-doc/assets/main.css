@@ -42,4 +42,19 @@
 	color: black;
     background-color: blanchedalmond;
     flex: 1;
+	font-family: ui-monospace;
+	padding-left: 2rem;
+    display: list-item;
+    padding-right: 1rem;
+	position: relative;
+    text-align: -webkit-match-parent;
+	font-size: 15px;
+	width: 16.4rem;
+	box-sizing: border-box;
+	overflow-y: auto;
 }
+.blinking:active {
+	transform: translate(0px, 2px);
+	-webkit-transform: translate(0px, 2px);
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  }
