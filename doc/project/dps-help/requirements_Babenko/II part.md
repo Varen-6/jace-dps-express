@@ -79,9 +79,10 @@ This is the default content
 Парсер написаний на JavaScript і поширюється під ліцензією MIT. Підтримується робота як в браузері, так і в Node.js. Незважаючи на мову програмування і закладену гнучкість, markdown-it має дуже високу швидкість, поступаючись тільки скомпільованим варіантам на С (у яких немає подібної розширюваності). Іншою приємною особливістю парсеру є слідування специфікації CommonMark.
 
 __Micromatch__
+
 __[Micromatch](https://www.npmjs.com/package/micromatch)__ - високо оптимізована бібліотека зіставлення підстановок та глобусів. Заміна і швидша альтернатива minimatch та multimatch. Використовується webpack, babel core, yarn, jest, браузер-синхронізацією, documentation.js, stylelint, nyc, ava та багатьма іншими.
 
-#### Extended globbing
+_Extended globbing_
 
 Micromatch підтримує наступні розширені функції глобалізації.
 
