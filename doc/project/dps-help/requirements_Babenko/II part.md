@@ -119,4 +119,23 @@ Micromatch підтримує наступні розширені функції
 
 ![Screenshot](2.png)
 
+* _footer.njk_
+
+``` js
+<footer class="container">
+  <p style="text-align: right; \\ стиль
+    font-size: 0.9em;
+    padding: 1em 0;
+    border-top: 1px solid #eaeaea;">
+    
+    &copy; 2021, Built with <a href="https://github.com/boldak/jace-doc">jace-doc</a>. \\ інформація, що міститься у footer
+  </p>
+</footer>
+
+```
+
+Результат роботи шаблону:
+
+![Screenshot](3.png)
+
 
