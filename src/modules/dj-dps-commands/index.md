@@ -8,7 +8,7 @@ JACE Data Processing Service is part of Jace platform
 that provide user friendly online SPA builder for Data Management, Data Mining, Data Scientists Collaboration and other BI solutions.
 
 **JACE key features**
-+ Online SPA design<
++ Online SPA design
 + SPA Hosting
 + Widget based dashboards
 + Widgets interaction
