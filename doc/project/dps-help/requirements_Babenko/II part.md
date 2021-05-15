@@ -72,13 +72,13 @@ This is the default content
 
 ### 3.1 Рендиринг
 
-**Markdown-it**
+* **Markdown-it**
 
 Рендиринг у проекті відбувається через [markdown-it](https://github.com/markdown-it/markdown-it). Це новий парсер markdown, ключова особливість якого - простота розширення синтаксису. При використанні маркдауна користувач рано чи пізно впирається в те, що чогось не вистачає і треба робити HTML-вставки. У markdown-it можна додавати нові елементи синтаксису через плагіни. В результаті зберігається безпека згенерованої HTML-розмітки і немає необхідності використовувати складні валідатори на кшталт owasp для захисту від XSS.
 
 Парсер написаний на JavaScript і поширюється під ліцензією MIT. Підтримується робота як в браузері, так і в Node.js. Незважаючи на мову програмування і закладену гнучкість, markdown-it має дуже високу швидкість, поступаючись тільки скомпільованим варіантам на С (у яких немає подібної розширюваності). Іншою приємною особливістю парсеру є слідування специфікації CommonMark.
 
-__Micromatch__
+* __Micromatch__
 
 __[Micromatch](https://www.npmjs.com/package/micromatch)__ - високо оптимізована бібліотека зіставлення підстановок та глобусів. Заміна і швидша альтернатива minimatch та multimatch. Використовується webpack, babel core, yarn, jest, браузер-синхронізацією, documentation.js, stylelint, nyc, ava та багатьма іншими.
 
@@ -100,7 +100,9 @@ Micromatch підтримує наступні розширені функції
 
 У проекті вони розташовані за директорією ``` jace-dps-express\build\templates\template.njk.```
 
-![](C:\Users\username\Pictures\MLO\mlo_logo.jpg)
+![uml](https://drive.google.com/file/d/1OtEW4O8MHaivd0HrknaDLNhdw-Y51C0f/view?usp=sharing)
+
+
 
 
 
