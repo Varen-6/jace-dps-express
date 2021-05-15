@@ -1,6 +1,3 @@
-let util = require("util");
-let _ = require("lodash-node");
-
 let IndicatorImplError = function(message) {
     this.message = message;
     this.name = "Command 'collection.map' implementation error";
