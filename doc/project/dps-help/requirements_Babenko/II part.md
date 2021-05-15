@@ -98,7 +98,7 @@ Micromatch підтримує наступні розширені функції
 
 Підсистема генерує вебсайт за допомогою шаблонів .njk. Данні шаблони є доступними та простими у використанні.
 
-У проекті вони розташовані за директорією jace-dps-express\build\templates\template.njk.
+У проекті вони розташовані за директорією ``` jace-dps-express\build\templates\template.njk.```
 
 ![](C:\Users\username\Pictures\MLO\mlo_logo.jpg)
 
