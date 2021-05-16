@@ -1,5 +1,5 @@
 ---
-title: Package Profile
+title: Package Help
 refs: './*.html'
 template: index.njk
 ---
