@@ -17,7 +17,7 @@ They are follows aliases of command name:
 + ```info```(aliased as ```value```) - **default command parameter** Value of info message (required)
 
 
-## How to use
+### How to use
 
 ```dps
 info(value:'Direct')
