@@ -1,6 +1,6 @@
 let groupByCommand = require("../groupby");
 
-describe("Collection.countby test suite", () => {
+describe("Collection.groupby test suite", () => {
   test("command should be defined", () => {
     expect(groupByCommand).toBeDefined();
   });

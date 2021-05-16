@@ -1,6 +1,6 @@
-let selectCommand = require("../take");
+let selectCommand = require("../select");
 
-describe("Collection.take test suite", () => {
+describe("Collection.select test suite", () => {
   test("command should be defined", () => {
     expect(selectCommand).toBeDefined();
   });
@@ -19,7 +19,7 @@ describe("Collection.take test suite", () => {
     let result = selectCommand.execute(command, state);
     expect(result.head.data).toEqual([]);
   });
-  test("should ", () => {
+  test("should select correct values from data", () => {
     let command = {
       settings: {
         criteria: (word) => word.length > 5,
@@ -32,6 +32,6 @@ describe("Collection.take test suite", () => {
       },
     };
     let result = selectCommand.execute(command, state);
-    expect(result.head.data).toEqual();
+    expect(result.head.data).toEqual(["test12", "test123"]);
   });
 });
