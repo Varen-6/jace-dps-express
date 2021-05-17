@@ -1,3 +1,7 @@
+# Підсистема документування. Аналіз предметної області
+
+## Вступ
+
 ### Globs 
 
 __[Глобус](https://gulpjs.com/docs/en/getting-started/explaining-globs/)__ (англ. glob) - це рядок буквених та / або символів підстановки, що використовується для узгодження шляхів до файлів. 
@@ -49,3 +53,8 @@ __[Live demo](https://markdown-it.github.io)__
 - Висока швидкість.
 - [Безпечно](https://github.com/markdown-it/markdown-it/tree/master/docs/security.md) за замовчуванням.
 - написані спільнотою [плагіни](https://www.npmjs.org/browse/keyword/markdown-it-plugin) та [інші пакети](https://www.npmjs.org/browse/keyword/markdown-it) на npm.
+
+## Джерела
+* [Документація Micromatch](https://github.com/micromatch/micromatch)
+* [Пояснення глобусів](https://gulpjs.com/docs/en/getting-started/explaining-globs/)
+* [Документація markdown-it](https://github.com/markdown-it/markdown-it)
