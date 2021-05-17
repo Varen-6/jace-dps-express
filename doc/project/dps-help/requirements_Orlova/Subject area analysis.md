@@ -145,7 +145,7 @@ Doxygen - консольна програма в дусі класичної Uni
 Системи документування збирають документацію та конвертують її в необхідний формат. Розробка цих систем є досить важливою для генерування якісної та достуної документації ПЗ.
 
 ## Джерела
-- [vuepress.vuejs.org](https://vuepress.vuejs.org/guide/getting-started.html#manual-installation)
+- [vuepress.vuejs.org](https://vuepress.vuejs.org/)
 - [javadoc](https://www.oracle.com/java/technologies/javase/javadoc.html)
 - [jsdoc.app](https://jsdoc.app/)
 - [doxygen](https://www.doxygen.nl/index.html)
