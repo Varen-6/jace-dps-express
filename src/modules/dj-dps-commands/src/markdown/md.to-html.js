@@ -1,5 +1,3 @@
-let jaceMark = require( "jace-mark")
-let _ = require("lodash")
 
 class MdImplError extends Error {
     constructor(message) {
