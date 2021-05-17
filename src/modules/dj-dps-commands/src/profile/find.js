@@ -1,8 +1,4 @@
 
-var Promise = require("bluebird");
-var http = require('axios');
-var gravatar = require('gravatar-api');
-
 class ProfileFindImplError extends Error {
     constructor(message) {
         super(message);
