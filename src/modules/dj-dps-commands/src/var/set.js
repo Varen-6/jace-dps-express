@@ -114,8 +114,7 @@ module.exports = {
     ],
     example: {
       description: "Variable usage",
-      code:
-        '<?json \r\n    "Hello" \r\n?>\r\nset("str")\r\n\r\n<?javascript \r\n    var notNull = function(item){\r\n        return item != undefined\r\n        \r\n    }; \r\n?>\r\nset("functions")\r\n\r\nload(\r\n    ds:"47611d63-b230-11e6-8a1a-0f91ca29d77e_2016_02", \r\n    as:\'json\'\r\n)\r\n\r\nselect("$.metadata.dataset.commit")\r\n\r\nset(var:"commitNote", val:"$[0].note")\r\nget("str")\r\ninfo()\r\nget("functions.notNull")\r\ninfo()\r\nget("commitNote")\r\ninfo()\r\n// equals for previus\r\nget("$.commitNote")\r\ninfo()\r\nlog()\r\n',
+      code: '<?json \r\n    "Hello" \r\n?>\r\nset("str")\r\n\r\n<?javascript \r\n    var notNull = function(item){\r\n        return item != undefined\r\n        \r\n    }; \r\n?>\r\nset("functions")\r\n\r\nload(\r\n    ds:"47611d63-b230-11e6-8a1a-0f91ca29d77e_2016_02", \r\n    as:\'json\'\r\n)\r\n\r\nselect("$.metadata.dataset.commit")\r\n\r\nset(var:"commitNote", val:"$[0].note")\r\nget("str")\r\ninfo()\r\nget("functions.notNull")\r\ninfo()\r\nget("commitNote")\r\ninfo()\r\n// equals for previus\r\nget("$.commitNote")\r\ninfo()\r\nlog()\r\n',
     },
   },
 

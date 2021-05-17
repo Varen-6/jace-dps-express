@@ -3,8 +3,21 @@ title: collection.select
 template: index.njk
 ---
 
+# Collection.select
+
 Select instances from collection
 
+### Command parameters
+
+- `criteria` (aliased as `criteria`, `select`) - javascript callback via bindable (required)
+
+Default values of `criteria` is defined as:
+
+```js
+"none";
+```
+
+### How to use
 
 ```dps
 <?javascript
@@ -36,4 +49,3 @@ log()
 
 
 ```
-

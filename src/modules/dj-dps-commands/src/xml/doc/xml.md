@@ -3,7 +3,11 @@ title: xml.xml
 template: index.njk
 ---
 
+# Xml.xml
+
 Set `xml` type for script context
+
+# How to use
 
 ```dps
 load(

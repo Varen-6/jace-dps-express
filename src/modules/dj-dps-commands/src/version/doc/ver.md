@@ -3,7 +3,11 @@ title: version.ver
 template: index.njk
 ---
 
+# Version.ver
+
 **Gets** DJ DP script version
+
+# How to use
 
 ```dps
 ver()

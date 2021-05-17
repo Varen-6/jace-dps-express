@@ -3,6 +3,8 @@ title: Csv injection
 template: index.njk
 ---
 
+# Csv command
+
 **Sets** `csv` **type for script context**
 
 For example you can inject csv data and manipulate it:

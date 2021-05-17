@@ -3,7 +3,28 @@ title: var.get
 template: index.njk
 ---
 
+# var.get
+
 **Gets** deep copy of variable and **sets** context
+
+### Aliases
+
+They are follows aliases of command name:
+
+- `get`
+
+### Command parameters
+
+- `path` (aliased as `path`, `select`, `var`)
+- `as` (aliased as `type`) - type of variable
+
+Default values of `path` and `as` are defined as:
+
+```js
+"$";
+```
+
+### How to use
 
 ```dps
 <?json

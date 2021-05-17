@@ -3,8 +3,27 @@ title: collection.groupby
 template: index.njk
 ---
 
+# Collection.groupby
+
 Select instances from collection
 
+### Aliases
+
+They are follows aliases of command name:
+
+- `group`
+
+### Command parameters
+
+- `transform` - javascript callback function(item){<return {key, value}>} via bindable (required)
+
+Default values of `transform` is defined as:
+
+```js
+"none";
+```
+
+### How to use
 
 ```dps
 <?javascript
@@ -36,4 +55,3 @@ log()
 
 
 ```
-

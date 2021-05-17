@@ -3,7 +3,19 @@ title: text.str
 template: index.njk
 ---
 
+# Text.str
+
 **Converts script context** to `string`
+
+### Aliases
+
+They are follows aliases of command name:
+
+- `str`
+- `text`
+- `string`
+
+### How to use
 
 ```dps
 <?json

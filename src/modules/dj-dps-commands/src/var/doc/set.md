@@ -3,7 +3,36 @@ title: var.set
 template: index.njk
 ---
 
+# var.set
+
 **Sets** variable value
+
+### Aliases
+
+They are follows aliases of command name:
+
+- `var.set`,
+- `var.let`,
+- `var.put`.
+
+### Command parameters
+
+- `var` (aliased as `variable`) - Variable name (required).
+- `value` (aliased as `val`) - Json path to selected value (optional). If 'value' is not assigned then input context will be stored.
+
+Default value of `var` is defined as:
+
+```js
+"undefined";
+```
+
+Default value of `value` is defined as:
+
+```js
+"$";
+```
+
+### How to use
 
 ```dps
 <?json

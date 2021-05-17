@@ -3,7 +3,28 @@ title: Context.context
 template: index.njk
 ---
 
+# Context.context
+
 **Puts string `Hello` into context**
+
+### Aliases
+
+They are follows aliases of command name:
+
+- `ctx`
+- `context`
+
+### Command parameters
+
+- `value` (aliased as `v`, `val`, `value`) - Value will be stored in context
+
+Default values of `value` is defined as:
+
+```js
+"string", "number", "bindable", "injection";
+```
+
+# How to use
 
 ```dps
 context(value:'Hello')
