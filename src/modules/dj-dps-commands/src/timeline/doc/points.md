@@ -1,36 +1,51 @@
 ---
-title: html.html
+title: timeline.points
 template: index.njk
 ---
-# html.html
-Bild groups from context via javascript callback
+# timeline.points
+Build list of tags
 
+### Aliases
+They are follows aliases of command name: 
++ ```timeline.points```.
++ ```time.points```.
++ ```t.points```.
++ ```timeline.ticks```.
++ ```time.ticks```.
++ ```t.ticks```.
 
 ### How to use
 
-    <?javascript
+```
+<?javascript
    
-      $context.mapper = function(d){
-             return {
-                       key:d, 
-                       value:d
-                                }};
-                                                           
-       $context.transform = function(d){
-                return {
-                         key:d.key, 
-                         count: d.values.length
-                                     }};
-                                                                                                         
-        $context.criteria = function(a,b){
-               return b.count-a.count
-                  };
+   $context.mapper = function(d){
+       return {
+           key:d, 
+           value:d
+           
+       }
+   };
+   
+   $context.transform = function(d){
+        return {
+            key:d.key, 
+            count: d.values.length
+        }
+   };
+   
+   $context.criteria = function(a,b){
+       return b.count-a.count
+   };
+   
+?>
 
-    ?>
-    nmeta('$..dataset.topics.*')
-    ngroup({{mapper}})
-    map({{transform}})
-    sort({{criteria}})
-    extend()
-    translate()
-                  
+meta('$..dataset.topics.*')
+
+group({{mapper}})
+map({{transform}})
+sort({{criteria}})
+
+extend()
+translate()
+```
