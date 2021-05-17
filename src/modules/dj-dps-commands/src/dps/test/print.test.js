@@ -4,7 +4,7 @@ describe("dps.print test suite", () => {
     test("command should be defined", () => {
 		expect(printCommand).toBeDefined()
 	});
-    test("should return json head type", () => {
+    test("should return dps head type", () => {
 
         let command = {settings:{}};
 

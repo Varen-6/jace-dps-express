@@ -1,9 +1,3 @@
-var DPSError = function(message) {
-    this.message = message;
-    this.name = "Command 'html' implementation error";
-}
-DPSError.prototype = Object.create(Error.prototype);
-DPSError.prototype.constructor = DPSError;
 
 module.exports = {
   name: "html",
@@ -12,7 +6,6 @@ module.exports = {
   defaultProperty:{},
 
   execute:function(command,state,config){
-    if (state.head.type != "string") throw new DPSError("Incompatible context type: " + state.head.type+". Use context injection or 'str()' command to convert context to 'string' type\nState: "+JSON.stringify(state.head))
     state.head.type = "html"
   	return state;
   },
