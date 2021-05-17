@@ -1,5 +1,4 @@
 let util = require("util");
-let _ = require("lodash-node");
 
 let TransposeImplError = function(message) {
     this.message = message;
