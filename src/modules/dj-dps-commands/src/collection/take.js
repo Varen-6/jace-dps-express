@@ -1,5 +1,4 @@
 let util = require("util");
-let _ = require("lodash-node");
 
 let TakeImplError = function(message) {
     this.message = message;
