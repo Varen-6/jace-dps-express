@@ -212,7 +212,7 @@ Micromatch підтримує наступні розширені функції
 ```
 * main.css - відповідає за всі стилі у шаблонах
 
-``` js
+``` css
 @import "_base.css";
 /*@import "vuetify.min.css"
 @import "github-gist.css"
