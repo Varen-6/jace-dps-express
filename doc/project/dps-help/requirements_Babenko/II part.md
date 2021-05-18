@@ -321,6 +321,20 @@ Micromatch підтримує наступні розширені функції
 Результат роботи post.njk collection.njk
 ![Screenshot](6.png)
 
+### 3.2 Micromatch у проекті 
+
+``` js
+module.exports = {
+	  protocol: process.env.PROTOCOL || "http",	
+      url: `${process.env.APP_HOST || "localhost:8098"}/doc`,
+      source: "./src/modules/dj-dps-commands",
+      includes:["**/*.(md|markdown)","!**/node_modules"], \\ пошук у проекті .md --> застосування micromatch
+      output: "./.tmp/public/doc",
+      templates: "./build/jace-doc/templates",
+      assets:"./build/jace-doc/assets"
+}
+```
+
 
 
 
