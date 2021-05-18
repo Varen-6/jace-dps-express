@@ -9,39 +9,84 @@ Set 'html' type for contet
 ### How to use
 
 ```dps
+/**
+ **
+ **     DATA PROCESSING SCRIPT: html
+ **     SERVICE: https://nevada-jace-dps.herokuapp.com
+ **
+ **/
+
 <?javascript
+    $scope.data = [
+        {
+            a: 0,
+            b:2
+        },
+        {
+            a: 1,
+            b:1
+        },
+        {
+            a: 2,
+            b:0
+        },
+    ]
     
-    $context.rowMapper = function(d){
-      return "<tr>"+ d.value.map(function(v){
-         return "<td style=\\"font-size:x-small\\">"+v+"</td>"
-      }).join("")+"</tr>"
-    };
-
 ?>
 
-<?dps
-
-    map({{rowMapper}})
-    concat()
-    html()
-    wrapHtml(tag:"table", class:"skin", style:'background:#ded;')
-
+<?html
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+        </tr>
+        ${body}
+    <table>    
 ?>
-set("t2html")
+
+set("tableWrapper")
+
+<?html
+        <tr>
+            <td>${row.a}</td>
+            <td>${row.b}</td>
+        </tr>    
+?>
+
+set("rowWrapper")
+
+<?javascript
+    $scope.res =  _.template($scope.tableWrapper)({ body: $scope.data.map( row => _.template($scope.rowWrapper)( {row} )).join(" ") })
+?>
+
+return("res")
+html()
+```
 
 
+### Data processing script returns:
 
-load(
-    ds:"47611d63-b230-11e6-8a1a-0f91ca29d77e_2016_02",
-    as:'dataset'
-)
+```html
+    <table>
+        <tr>
+            <th>a</th>
+            <th>b</th>
+        </tr>
+        
+        <tr>
+            <td>0</td>
+            <td>2</td>
+        </tr>    
+ 
+        <tr>
+            <td>1</td>
+            <td>1</td>
+        </tr>    
+ 
+        <tr>
+            <td>2</td>
+            <td>0</td>
+        </tr>    
 
-proj([
-    {dim:"time", as:"row"},
-    {dim:"indicator",as:"col"}
-])
-
-format(2)
-json()
-select("$.body.*")
-run({{t2html}})```
+    <table> 
+```

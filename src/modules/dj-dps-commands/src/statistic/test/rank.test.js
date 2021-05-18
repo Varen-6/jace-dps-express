@@ -24,5 +24,25 @@ describe("statistic.rank test suite", () => {
         expect( () => { rankByCommand.execute(command, state) } ).toThrow();
 
     });
+    test("Should ", () => {
+
+        let command = {
+            settings: {
+                direction: "col",
+                indexes: [0],
+                asc: "az",
+                mapper: 's'
+            }
+        };
+
+        let state = {
+            head: {
+                data: [1, 2, 3],
+                type: "json"
+            }
+        };
+        rankCommand.execute(command, state)
+
+    });
 
 });

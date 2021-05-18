@@ -22,16 +22,67 @@ They are follows aliases of command name:
 ### How to use
 
 ```dps
-load(
-    ds:'47611d63-b230-11e6-8a1a-0f91ca29d77e_2016_02',
-    as:"dataset"
+/**
+ **
+ **     DATA PROCESSING SCRIPT: statistic.rank
+ **     SERVICE: https://nevada-jace-dps.herokuapp.com
+ **
+ **/
+
+<?javascript
+    $scope.data = [
+        {
+            a: 0,
+            b:2
+        },
+        {
+            a: 1,
+            b:1
+        },
+        {
+            a: 2,
+            b:0
+        },
+    ]
+    
+?>
+
+get("data")
+
+
+s.rank(by:"a", as:"asc", return: "rankA")
+
+stat.rank(
+    by:<? item => item.b + item.a ?>, 
+    return: "rankB"
 )
-proj([
-  { dim:'time', role:'row', items:[] },
-  { dim:'indicator', role:'col', items:[] }
-])
 
-rank(for:"col",items:[0],as:"az")
 
-order(by:0, as:"az")
+collection.orderBy( by:"rankA")
+```
+
+
+### Data processing script returns:
+
+```json
+[
+    {
+        "a": 2,
+        "b": 0,
+        "rankA": 1,
+        "rankB": 1
+    },
+    {
+        "a": 1,
+        "b": 1,
+        "rankA": 2,
+        "rankB": 1
+    },
+    {
+        "a": 0,
+        "b": 2,
+        "rankA": 3,
+        "rankB": 1
+    }
+]
 ```
