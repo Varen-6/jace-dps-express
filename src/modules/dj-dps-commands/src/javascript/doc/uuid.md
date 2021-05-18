@@ -13,6 +13,7 @@ They are follows aliases of command name:
 ### Command parameters
 + ```model``` - **default command parameter** Retuns all definitions when collection name is undefined.
 
+```dps
 
 /**
  **

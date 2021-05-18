@@ -30,6 +30,11 @@ They are follows aliases of command name:
  **/
 
 <?javascript
+    $scope.f = {
+        f1: d => d < 0,
+        f2: d => d == 0,
+        f3: d => d > 0
+    }
     
     var eqFirstMeta = function(a,b){
       return a.metadata[0].id == b.metadata[0].id
@@ -55,4 +60,45 @@ info()
 
 log()
 
+```
+
+This data processing script returns
+
+```json
+     {
+        "logger": 25,
+        "scope": "local",
+        "timeStamp": "18/05/21 05:20:00",
+        "level": "info",
+        "message": [
+            "\"eqFirstMeta\""
+        ]
+    },
+    {
+        "logger": 25,
+        "scope": "local",
+        "timeStamp": "18/05/21 05:20:00",
+        "level": "info",
+        "message": [
+            "{\"type\":\"function\"}"
+        ]
+    },
+    {
+        "logger": 25,
+        "scope": "local",
+        "timeStamp": "18/05/21 05:20:00",
+        "level": "info",
+        "message": [
+            "\"nullCount\""
+        ]
+    },
+    {
+        "logger": 25,
+        "scope": "local",
+        "timeStamp": "18/05/21 05:20:00",
+        "level": "info",
+        "message": [
+            "{\"type\":\"function\"}"
+        ]
+    }
 ```
