@@ -68,6 +68,103 @@ This is the default content
 {% extends parentTemplate %}
 ```  
 Ви використовуєте успадкування за допомогою тегів <b>extends</b> і <b>block</b>. 
+## 3. Опис генерації веб-сторінки у проекті jace-doc.
 
+### 3.1 Рендиринг
+
+* **Markdown-it**
+
+Рендиринг у проекті відбувається через [markdown-it](https://github.com/markdown-it/markdown-it). Це новий парсер markdown, ключова особливість якого - простота розширення синтаксису. При використанні маркдауна користувач рано чи пізно впирається в те, що чогось не вистачає і треба робити HTML-вставки. У markdown-it можна додавати нові елементи синтаксису через плагіни. В результаті зберігається безпека згенерованої HTML-розмітки і немає необхідності використовувати складні валідатори на кшталт owasp для захисту від XSS.
+
+Парсер написаний на JavaScript і поширюється під ліцензією MIT. Підтримується робота як в браузері, так і в Node.js. Незважаючи на мову програмування і закладену гнучкість, markdown-it має дуже високу швидкість, поступаючись тільки скомпільованим варіантам на С (у яких немає подібної розширюваності). Іншою приємною особливістю парсеру є слідування специфікації CommonMark.
+
+* __Micromatch__
+
+__[Micromatch](https://www.npmjs.com/package/micromatch)__ - високо оптимізована бібліотека зіставлення підстановок та глобусів. Заміна і швидша альтернатива minimatch та multimatch. Використовується webpack, babel core, yarn, jest, браузер-синхронізацією, documentation.js, stylelint, nyc, ava та багатьма іншими.
+
+_Extended globbing_
+
+Micromatch підтримує наступні розширені функції глобалізації.
+
+| **шаблон** | **еквівалентний регулярний вираз** | **опис** |
+| --- | --- | --- |
+| `?(pattern)` | `(pattern)?` | Відповідає нулю або одному входженню даних шаблонів |
+| `*(pattern)` | `(pattern)*` | Відповідає нулю або декільком випадкам входження даних шаблонів |
+| `+(pattern)` | `(pattern)+` | Відповідає одному або декільком випадкам входження даних шаблонів |
+| `@(pattern)` | `(pattern)` <sup>*</sup> | Відповідає одному з даних шаблонів |
+| `!(pattern)` | N/A (еквівалентний регулярний вираз набагато складніший) | Відповідає будь-скільком, крім одного з поданих шаблонів |
+
+### 3.2 Шаблони .njk 
+
+Підсистема генерує вебсайт за допомогою шаблонів .njk. Данні шаблони є доступними та простими у використанні.
+
+У проекті вони розташовані за директорією ``` jace-dps-express\build\templates\template.njk.```
+
+![Screenshot](1.png)
+
+Кожен з шаблонів має відповідну структуру:
+
+* _header.njk_
+
+``` js
+<header class="header container"> 
+  <h1>
+    JACE Data Processing Service \\ назва сайту
+  <hr> \\ горизонтальна лінія
+  </h1>
+  
+</header>
+```
+Результат роботи цього шаблону:
+
+![Screenshot](2.png)
+
+* _footer.njk_
+
+``` js
+<footer class="container">
+  <p style="text-align: right; \\ стиль
+    font-size: 0.9em;
+    padding: 1em 0;
+    border-top: 1px solid #eaeaea;">
+    
+    &copy; 2021, Built with <a href="https://github.com/boldak/jace-doc">jace-doc</a>. \\ інформація, що міститься у footer
+  </p>
+</footer>
+
+```
+
+Результат роботи шаблону:
+
+![Screenshot](3.png)
+
+* index.njk - шаблон, по якому збирається увесь сайт
+
+``` js
+{% extends "layout.njk" %}
+
+{% block content %}
+  
+  <div class="markdown-body">
+    
+    
+    {{ content | safe }}
+  </div>
+  
+  <ul class="table-of-content">
+    <div class="mt-5 text-white text-center w-5/6 mx-auto py-5 text-xl font-bold rounded bg-black title">
+           DPS Commands Help
+         </div>
+    {% for page in frontMatter.refs.items %}
+      <li class="my-2 py-3 bg-black text-white rounded-xl text-center blinking">
+        <a href="{{ page.url }}">
+          {{ page.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
+```
 
 
