@@ -141,24 +141,29 @@ Micromatch підтримує наступні розширені функції
 * index.njk - шаблон, по якому збирається увесь сайт
 
 ``` js
-{% extends "layout.njk" %}
+{% extends "layout.njk" %} \\ наслідування layout.njk
 
 {% block content %}
   
-  <div class="markdown-body">
+  <div class="markdown-body"> \\ розміщення документації з файлу .md
     
+    <a href="javascript:history.back()" style="background-color: cornsilk;display: inline-block; \\ кнопка назад
+    padding: 8px 16px;border-radius: 10%;color: black;margin:25px;"> \\ стиль для кнопки назад
+        Назад
+    </a>
+    <br/>
     
     {{ content | safe }}
   </div>
   
-  <ul class="table-of-content">
-    <div class="mt-5 text-white text-center w-5/6 mx-auto py-5 text-xl font-bold rounded bg-black title">
+  <ul class="table-of-content"> \\ формування сайдбару
+    <div class="mt-5 text-white text-center w-5/6 mx-auto py-5 text-xl font-bold rounded bg-black title">\\стилі для заголовку сайдбару
            DPS Commands Help
          </div>
-    {% for page in frontMatter.refs.items %}
-      <li class="my-2 py-3 bg-black text-white rounded-xl text-center blinking">
-        <a href="{{ page.url }}">
-          {{ page.title }}
+    {% for page in frontMatter.refs.items %} \\ сборка сайдбара по посиланням на документацію .md
+      <li class="my-2 py-3 bg-black text-white rounded-xl text-center blinking"> \\ стилі для кожного посилання
+        <a href="{{ page.url }}"> \\ посилання
+          {{ page.title }} 
         </a>
       </li>
     {% endfor %}
@@ -167,4 +172,43 @@ Micromatch підтримує наступні розширені функції
 {% endblock %}
 ```
 
+![Screenshot](4.png)
+
+* layout.njk - шаблон html, на якому зав'язані усі веб-сторінки
+
+``` js
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ frontMatter.title }} - {{ config.siteTitle }}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="{{ assets['main.css'] }}">\\підключення стилів
+  <link rel="stylesheet" href="{{ assets['vuetify.min.css'] }}">
+  <link rel="stylesheet" href="{{ assets['tomorrow.css'] }}">
+  <link rel="stylesheet" href="{{ assets['github-markdown.css'] }}">
+  <link href="https://unpkg.com/tailwindcss@%5E2/dist/tailwind.min.css" rel="stylesheet">
+  
+</head>
+
+<body>
+  
+  {% include "_header.njk" %} \\ header
+
+  <main class="container"> \\ вміст усієї сторінки
+
+    <div class="view">
+    {% block content %}{% endblock %} 
+    </div>
+  </main>
+
+  {% include "_footer.njk" %} \\ footer
+</body>
+</html>
+
+```
+![Screenshot](5.png)
 
