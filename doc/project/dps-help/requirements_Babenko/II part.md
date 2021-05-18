@@ -210,5 +210,116 @@ Micromatch підтримує наступні розширені функції
 </html>
 
 ```
+* main.css - відповідає за всі стилі у шаблонах
+
+``` js
+@import "_base.css";
+/*@import "vuetify.min.css"
+@import "github-gist.css"
+*/
+:root {
+  --container-width: 700px;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 1.5rem auto;
+  display:flex;
+}
+
+.header {
+	font-size: 40px;
+	background-color: white;
+	color: black;
+}
+.header-anchor {
+	display: none;
+}
+
+.markdown-body {
+	/*box-sizing: border-box;*/
+	min-width: 200px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 45px;
+}
+
+@media (max-width: 767px) {
+	.markdown-body {
+		padding: 15px;
+	}
+}
+.view{
+	display:flex;
+	flex-direction: row-reverse;
+}
+.table-of-content {
+	color: black;
+    background-color: cornsilk;
+    flex: 1;
+	font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
+	padding-left: 1rem;
+    display: list-item;
+    padding-right: 1rem;
+	position: relative;
+    text-align: -webkit-match-parent;
+	font-size: 15px;
+	width: 16.4rem;
+	box-sizing: border-box;
+	overflow-y: auto;
+}
+.blinking:active {
+	transform: translate(0px, 2px);
+	-webkit-transform: translate(0px, 2px);
+	box-shadow: 0 0 15px rgba(185, 177, 177, 0.5);
+  }
+  .title{
+	font-family: "Montserrat", sans-serif;
+  }
+  
+```
 ![Screenshot](5.png)
+
+* collection.njk - шаблон, що збираэ посилання на маркдаун файли
+``` js
+{% extends "layout.njk" %} \\ наслідування
+
+{% block content %}
+  <h1>{{ frontMatter.title }}</h1>\\ назва на посилання
+  
+  <ul>
+    {% for post in collection %} \\ проходимось циклом по collection
+      <li>
+        <a href="{{ post.url }}"> \\ збираємо усі url
+          {{ post.frontMatter.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+  
+{% endblock %}
+
+```
+
+
+* post.njk
+``` js
+{% extends "layout.njk" %} \\ наслідування 
+
+{% block content %}
+  <article class="post">
+    <h1>{{ frontMatter.title }}</h1> \\назви для подальших .md в сайдбарі
+
+    
+    {{ content | safe }}
+  </article>
+  
+  
+{% endblock %}
+```
+Результат роботи post.njk collection.njk
+![Screenshot](6.png)
+
+
+
 
