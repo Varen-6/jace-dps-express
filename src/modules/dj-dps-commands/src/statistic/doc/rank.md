@@ -14,9 +14,9 @@ They are follows aliases of command name:
 
 ### Command Parameters
 
-+ ```command```(aliased as ```for```, ```dir```): Direction of iteration (optional)
-+ ```indexes```(aliased as ```items```): Array of 0-based indexes of items that will be ranked (optional)
-+ ```asc```(aliased as ```order```, ```as```): Define order (optional)
++ ```mapper```(aliased as ```by```): Mapper definition (required)
++ ```named```(aliased as ```name```, ```return```): by what name to return rank (required)
++ ```order```(aliased as ```as```): Define order (optional)
 
 
 ### How to use

@@ -8,40 +8,84 @@ describe("statistic.rank test suite", () => {
 
         let command = {
             settings: {
-                direction: "col",
-                indexes: [0],
-                asc: "az",
+                named: 'rankA',
+                order: "asc",
 
             }
         };
 
         let state = {
             head: {
-                data: [1, 2, 3],
+                data: [
+                    {
+                        a: 0,
+                        b: 2
+                    },
+                    {
+                        a: 1,
+                        b: 1
+                    },
+                    {
+                        a: 2,
+                        b: 0
+                    },
+                ],
                 type: "json"
             }
         };
-        expect( () => { rankByCommand.execute(command, state) } ).toThrow();
+        expect(() => {
+            rankByCommand.execute(command, state)
+        }).toThrow();
 
     });
-    test("Should ", () => {
+    test("Should return ranked by \"a\" Array", () => {
 
         let command = {
             settings: {
-                direction: "col",
-                indexes: [0],
-                asc: "az",
-                mapper: 's'
+                mapper: "a",
+                named: 'rankA',
+                order: "asc",
+
             }
         };
 
         let state = {
             head: {
-                data: [1, 2, 3],
+                data: [
+                    {
+                        a: 0,
+                        b: 2
+                    },
+                    {
+                        a: 1,
+                        b: 1
+                    },
+                    {
+                        a: 2,
+                        b: 0
+                    },
+                ],
                 type: "json"
             }
         };
-        rankCommand.execute(command, state)
+        let res = rankCommand.execute(command, state)
+        expect(res.head.data).toEqual([
+    {
+        "a": 0,
+        "b": 2,
+        "rankA": 3
+    },
+    {
+        "a": 1,
+        "b": 1,
+        "rankA": 2
+    },
+    {
+        "a": 2,
+        "b": 0,
+        "rankA": 1
+    }
+])
 
     });
 
