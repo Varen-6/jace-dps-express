@@ -10,16 +10,16 @@ Set `xml` type for script context
 # How to use
 
 ```dps
-load(
-    url:'http://127.0.0.1:8080/api/resource/scripting-xml.xml',
-    as:'xml',
-    into:'external'
-)
-
-<?xml
-    <a><b>text</b></a>
+<?json
+    "<a><b>some text</b></a>"
 ?>
-set('internal')
+str()
+xml()
 
-get()
+```
+
+This data processing script returns
+
+```html
+<a><b>some text</b></a>
 ```

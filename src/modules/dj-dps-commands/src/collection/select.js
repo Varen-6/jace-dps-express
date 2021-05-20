@@ -18,7 +18,8 @@ module.exports = {
   },
 
   defaultProperty: {
-    filter: "criteria",
+    "collection.select": "criteria",
+    "c.select": "criteria",
   },
 
   execute: function (command, state, config) {

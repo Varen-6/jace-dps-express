@@ -10,5 +10,15 @@ template: index.njk
 ### How to use
 
 ```dps
-<%text version() %>
+<?json
+    "test"
+?>
+
+text()
+```
+
+This data processing script returns
+
+```
+test
 ```
