@@ -1,5 +1,3 @@
-var util = require("util");
-
 
 module.exports = {
   name: "md",

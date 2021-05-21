@@ -1,8 +1,4 @@
-var iconv = require('iconv-lite');
-// iconv.extendNodeEncodings();
 
-
-var Promise = require("bluebird");
 var axios = require('axios');
 
 var js = require("../../javascript/eval").implementation;
