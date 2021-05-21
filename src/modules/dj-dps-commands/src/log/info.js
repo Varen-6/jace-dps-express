@@ -36,7 +36,7 @@ module.exports = {
   },
 
   help:{
-    synopsis:"Puts info message into logger ",
+    synopsis:"Puts info message into logger",
     
     name:{
       "default" : "info",

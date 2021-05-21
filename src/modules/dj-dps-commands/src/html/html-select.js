@@ -1,4 +1,4 @@
-var util = require("util");
+var _ = require("lodash");
 var cheerio = require("cheerio")
 
 
@@ -36,7 +36,7 @@ module.exports = {
     command.settings.data = (command.settings.data) ? command.settings.data : state.head.data
     command.settings.selector = command.settings.selector || "*"
     command.settings.returns = (command.settings.returns) || "text"
-    command.settings.returns = (util.isArray(command.settings.returns)) 
+    command.settings.returns = (_.isArray(command.settings.returns))
       ? command.settings.returns 
       : command.settings.returns.split(",").map( d => d.trim() )
 

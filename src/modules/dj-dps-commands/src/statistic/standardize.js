@@ -1,4 +1,4 @@
-let STAT = require("../lib/stat")
+    let STAT = require("../lib/stat")
 let util = require("util");
 let s_util = require("./utils");
 let StatImplError = require("./staterror")

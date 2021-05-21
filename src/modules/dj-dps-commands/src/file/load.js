@@ -27,7 +27,7 @@ let impl = function(params) {
     let filename = params.file;
     if (filename) {
         
-        let loader = loaders[mime.lookup(path.basename(filename))]
+        let loader = loaders[mime.getType(path.basename(filename))]
         
         if (loader) {
             try {
@@ -36,7 +36,7 @@ let impl = function(params) {
                 throw new FileLoadImplError( e.toString() );
             }
         } else {
-            throw new FileLoadImplError("Mime type: '" + mime.lookup(path.basename(filename)) + "' not supported");
+            throw new FileLoadImplError("Mime type: '" + mime.getType(path.basename(filename)) + "' not supported");
         }
 
     } else {
