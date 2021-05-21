@@ -1,5 +1,6 @@
 ---
-title: Package Statistic
+title: Package Matrix
 refs: './*.html'
 template: index.njk
 ---
+
