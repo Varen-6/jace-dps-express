@@ -1,6 +1,4 @@
 
-let Promise = require("bluebird");
-let jp = require("jsonpath");
 let util = require("util");
 let storageUtils = require("../utils");
 let setCommand = require("../../var/set")
