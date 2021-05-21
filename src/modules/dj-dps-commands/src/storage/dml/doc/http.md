@@ -2,27 +2,26 @@
 title: dml.http
 template: index.njk
 ---
+# http
+Make HTTP requests that can be used to send or receive data from a server side resource.
 
-# Dml.http
-
-Get data from source. Available sources: dataset, cached data, external url
 
 ### Aliases
-
-They are follows aliases of command name:
-
-- `dml.http`
-
-### Command parameters
-
-- `dataset`(aliased as `ds`) - UUID for dataset (optional). Use command 'meta()' for find datasets. **default command parametr (required)** 
-- `cache` - UUID for cached data (optional). Use command 'cache()' for cache context. **default command parametr (required)** 
-- `url` - Url for data (optional). You can process external data via url. **default command parametr (required)** 
+They are follows aliases of command name: 
++ ```http```.
 
 
 ### How to use
 
 ```dps
+
+/**
+ **
+ **     DATA PROCESSING SCRIPT: countby example
+ **     SERVICE: https://nevada-jace-dps.herokuapp.com
+ **
+ **/
+
 load(
     ds:'47611d63-b230-11e6-8a1a-0f91ca29d77e_2016_02',
     as:'dataset')

@@ -1,5 +1,5 @@
 let STAT = require("../lib/stat")
-let util = require("util");
+let _ = require("lodash");
 let s_util = require("./utils");
 let StatImplError = require("./staterror")
 
@@ -34,7 +34,7 @@ module.exports = {
         if(!command.settings.mapper)
             throw new StatImplError("Rank mapper not defined")
     
-        if(!util.isFunction(command.settings.mapper)){
+        if(!_.isFunction(command.settings.mapper)){
             let attr_name = command.settings.mapper
             command.settings.mapper = item => item[attr_name]
         }
