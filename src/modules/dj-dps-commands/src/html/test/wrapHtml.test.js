@@ -6,7 +6,9 @@ describe("html.wrapHtml test suite", () => {
 	});
     test("should return html head type", () => {
 
-        let command = {settings:{}};
+        let command = {settings:{
+            tag: "tr"
+            }};
 
 		let state= {
             head: {
@@ -16,7 +18,7 @@ describe("html.wrapHtml test suite", () => {
         };
 		let result = wrapHtmlCommand.execute(command, state);
         expect(result.head.type).toBe("html");
-        expect(result.head.data).toEqual("<undefined>Ask someone else</undefined>")
+        expect(result.head.data).toEqual("<tr>Ask someone else</tr>")
     });
 
 });
