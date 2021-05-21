@@ -1,4 +1,3 @@
-let Promise = require("bluebird");
 let storageUtils = require("../utils");
 let util = require("util");
 const mongo = require('mongodb').MongoClient
