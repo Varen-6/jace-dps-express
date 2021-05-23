@@ -31,7 +31,7 @@ They are follows aliases of command name:
  **
  **/
 
-"<?javascript
+<?javascript
 
     $scope.f = {
             f1: d => d < 0,
@@ -73,12 +73,12 @@ get('f.criteria')
 info('criteria')
 info()
 
-log()"
+log()
 
 ```
 
 This data processing script returns
-'''
+'''json
 [
     {
         "logger": 3,
