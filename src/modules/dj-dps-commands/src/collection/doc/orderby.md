@@ -19,24 +19,110 @@ They are follows aliases of command name:
     
 + ```order```(aliased as ```by```) - **default command parameter** is a function that maps a collection item to a projection for counting values.
 
-Default value of ```mapper``` is defined as:
-
-
-```js
-    item => item
-``` 
-
 ### How to use
 
 ```dps
 
 /**
  **
- **     DATA PROCESSING SCRIPT: countby example
+ **     DATA PROCESSING SCRIPT: orderby
  **     SERVICE: https://nevada-jace-dps.herokuapp.com
  **
  **/
 
-"<?javascript\r\n   \r\n   $context.mapper = function(d){\r\n       return {\r\n           key:d, \r\n           value:d\r\n           \r\n       }\r\n   };\r\n   \r\n   $context.transform = function(d){\r\n        return {\r\n            key:d.key, \r\n            count: d.values.length\r\n        }\r\n   };\r\n   \r\n   $context.criteria = function(a,b){\r\n       return b.count-a.count\r\n   };\r\n   \r\n?>\r\n\r\nmeta('$..dataset.topics.*')\r\n\r\ngroup({{mapper}})\r\nmap({{transform}})\r\nsort({{criteria}})\r\n\r\nextend()\r\ntranslate()\r\n"
+"<?javascript
+
+    $scope.f = {
+            f1: d => d < 0,
+            f2: d => d == 0,
+            f3: d => d > 0
+        }
+   
+   var mapper = function(d){
+       return {
+           key:d, 
+           value:d
+           
+       }
+   };
+   
+   var transform = function(d){
+        return {
+            key:d.key, 
+            count: d.values.length
+        }
+   };
+   
+   var criteria = function(a,b){
+       return b.count-a.count
+   };
+   
+?>
+
+set('f')
+
+get('f.mapper')
+info('mapper')
+info()
+
+get('f.transform')
+info('transform')
+
+get('f.criteria')
+info('criteria')
+info()
+
+log()"
 
 ```
+
+This data processing script returns
+'''
+[
+    {
+        "logger": 3,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:05:11",
+        "level": "info",
+        "message": [
+            "\"mapper\""
+        ]
+    },
+    {
+        "logger": 3,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:05:11",
+        "level": "info",
+        "message": [
+            "{\"type\":\"function\"}"
+        ]
+    },
+    {
+        "logger": 3,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:05:11",
+        "level": "info",
+        "message": [
+            "\"transform\""
+        ]
+    },
+    {
+        "logger": 3,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:05:11",
+        "level": "info",
+        "message": [
+            "\"criteria\""
+        ]
+    },
+    {
+        "logger": 3,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:05:11",
+        "level": "info",
+        "message": [
+            "{\"type\":\"function\"}"
+        ]
+    }
+]
+'''

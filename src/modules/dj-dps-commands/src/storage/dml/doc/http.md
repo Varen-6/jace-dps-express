@@ -17,7 +17,7 @@ They are follows aliases of command name:
 
 /**
  **
- **     DATA PROCESSING SCRIPT: countby example
+ **     DATA PROCESSING SCRIPT: http example
  **     SERVICE: https://nevada-jace-dps.herokuapp.com
  **
  **/
