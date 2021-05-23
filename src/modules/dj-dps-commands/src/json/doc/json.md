@@ -24,12 +24,12 @@ They are follows aliases of command name:
 
 /**
  **
- **     DATA PROCESSING SCRIPT: countby example
+ **     DATA PROCESSING SCRIPT: json
  **     SERVICE: https://nevada-jace-dps.herokuapp.com
  **
  **/
 
-<?json
+ <?json
     [1,1,1]
 ?>
 set('json')
@@ -41,6 +41,7 @@ set('json')
 ?>
 json()
 set('csv')
+info()
 
 <?xml
     <a id="1">
@@ -51,6 +52,7 @@ set('csv')
 ?>
 json()
 set('xml')
+info()
 
 <?html
     <div id="1">
@@ -60,7 +62,41 @@ set('xml')
 ?>
 json()
 set('html')
+info()
 
 get()
+log()
+```
 
+This data processing script returns
+```json
+[
+    {
+        "logger": 10,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:39:20",
+        "level": "info",
+        "message": [
+            "{\"type\":\"json\",\"data\":[{\"a\":\"1\",\"b\":\"2\",\"c\":\"3\"},{\"a\":\"4\",\"b\":\"5\",\"c\":\"6\"}]}"
+        ]
+    },
+    {
+        "logger": 10,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:39:20",
+        "level": "info",
+        "message": [
+            "{\"data\":{\"a\":{\"_attributes\":{\"id\":\"1\"},\"b\":[\"<no parsed data>  text value 0\",\"<no parsed data>  text value 1\"]}},\"type\":\"json\"}"
+        ]
+    },
+    {
+        "logger": 10,
+        "scope": "local",
+        "timeStamp": "23/05/21 11:39:20",
+        "level": "info",
+        "message": [
+            "{\"data\":{\"node\":\"root\",\"child\":[{\"node\":\"text\",\"text\":\"\\n    \"},{\"node\":\"element\",\"tag\":\"div\",\"attr\":{\"id\":\"1\"},\"child\":[{\"node\":\"text\",\"text\":\"\\n        \"},{\"node\":\"element\",\"tag\":\"h2\",\"child\":[{\"node\":\"text\",\"text\":\"Title\"}]},{\"node\":\"text\",\"text\":\"\\n        \"},{\"node\":\"element\",\"tag\":\"div\",\"child\":[{\"node\":\"text\",\"text\":\"Content\"}]},{\"node\":\"text\",\"text\":\"\\n    \"}]},{\"node\":\"text\",\"text\":\"\\n\"}]},\"type\":\"json\"}"
+        ]
+    }
+]
 ```
