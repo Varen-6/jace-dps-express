@@ -68,7 +68,7 @@ get()
 log()
 
 This data processing script returns
-'''json
+```json
 [
     {
         "logger": 10,
@@ -98,4 +98,4 @@ This data processing script returns
         ]
     }
 ]
-'''
+```

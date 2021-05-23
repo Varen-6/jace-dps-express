@@ -77,7 +77,7 @@ log()
 ```
 
 This data processing script returns
-'''json
+```json
 [
     {
         "logger": 3,
@@ -125,4 +125,4 @@ This data processing script returns
         ]
     }
 ]
-'''
+```

@@ -77,53 +77,52 @@ log()
 ```
 
 This data processing script returns
-'''json
-[
-    {
-        "logger": 3,
-        "scope": "local",
-        "timeStamp": "23/05/21 11:05:11",
-        "level": "info",
-        "message": [
-            "\"mapper\""
-        ]
-    },
-    {
-        "logger": 3,
-        "scope": "local",
-        "timeStamp": "23/05/21 11:05:11",
-        "level": "info",
-        "message": [
-            "{\"type\":\"function\"}"
-        ]
-    },
-    {
-        "logger": 3,
-        "scope": "local",
-        "timeStamp": "23/05/21 11:05:11",
-        "level": "info",
-        "message": [
-            "\"transform\""
-        ]
-    },
-    {
-        "logger": 3,
-        "scope": "local",
-        "timeStamp": "23/05/21 11:05:11",
-        "level": "info",
-        "message": [
-            "\"criteria\""
-        ]
-    },
-    {
-        "logger": 3,
-        "scope": "local",
-        "timeStamp": "23/05/21 11:05:11",
-        "level": "info",
-        "message": [
-            "{\"type\":\"function\"}"
-        ]
-    }
-]
-'''
+
+```json
+{
+    "logger": 3,
+    "scope": "local",
+    "timeStamp": "23/05/21 11:05:11",
+    "level": "info",
+    "message": [
+        "\"mapper\""
+    ]
+},
+{
+    "logger": 3,
+    "scope": "local",
+    "timeStamp": "23/05/21 11:05:11",
+    "level": "info",
+    "message": [
+        "{\"type\":\"function\"}"
+    ]
+},
+{
+    "logger": 3,
+    "scope": "local",
+    "timeStamp": "23/05/21 11:05:11",
+    "level": "info",
+    "message": [
+        "\"transform\""
+    ]
+},
+{
+    "logger": 3,
+    "scope": "local",
+    "timeStamp": "23/05/21 11:05:11",
+    "level": "info",
+    "message": [
+        "\"criteria\""
+    ]
+},
+{
+    "logger": 3,
+    "scope": "local",
+    "timeStamp": "23/05/21 11:05:11",
+    "level": "info",
+    "message": [
+        "{\"type\":\"function\"}"
+    ]
+}
+```
 
